@@ -1,0 +1,16 @@
+<h2>
+<%= link_to '一覧に戻る', articles_path, class: 'header-menu' %>
+新しい記事
+</h2>
+<%= form_for :article, url: articles_path do |f| %>
+<p>
+    <%= f.text_field :name, placeholder: '記事の名前' %>
+</p>
+<p>
+    <%= f.text_area :description, placeholder: '記事の内容' %>
+</p>
+<p>
+    <%= f.submit %>
+</p>
+
+<% end %>

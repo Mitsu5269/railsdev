@@ -1,2 +1,5 @@
-<h2><%= @article.name %></h2>
+<h2>
+<%= link_to '記事一覧', articles_path, class: 'header-menu' %>
 <%= @article.name %>
+</h2>
+<%= @article.description %>

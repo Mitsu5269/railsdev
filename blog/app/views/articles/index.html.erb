@@ -1,9 +1,12 @@
-<h2>一覧</h2>
+<h2>
+<%= link_to '新しい記事', new_article_path, class: 'header-menu' %>
+一覧
+</h2>
 
 <ul>
 <% @articles.each do |article| %>
 <li>
-<%= link_to article.name, article_path(post) %>
+<%= link_to article.name, article_path(article) %>
 </li>
 <% end %>
 </ul>
