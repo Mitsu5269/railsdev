@@ -8,12 +8,14 @@
     <th>名称</th>
     <th>日時</th>
     <th></th>
+    <th></th>
 </tr>
 <% @articles.each do |article| %>
 <tr>
     <td><%= link_to article.name, article_path(article) %></td>
     <td><%= article.created_at %></td>
     <td><%= link_to '編集', edit_article_path(article) %></td>
+    <td><%= link_to '削除', article, method: :delete, data: { confirm: "記事「#{article.name}」を削除します。よろしいですか？" } %></td>
 </tr>
 <% end %>
 </table>
