@@ -3,10 +3,17 @@
 一覧
 </h2>
 
-<ul>
+<table>
+<tr>
+    <th>名称</th>
+    <th>日時</th>
+    <th></th>
+</tr>
 <% @articles.each do |article| %>
-<li>
-<%= link_to article.name, article_path(article) %>
-</li>
+<tr>
+    <td><%= link_to article.name, article_path(article) %></td>
+    <td><%= article.created_at %></td>
+    <td><%= link_to '編集', edit_article_path(article) %></td>
+</tr>
 <% end %>
-</ul>
+</table>

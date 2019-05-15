@@ -2,4 +2,6 @@
 <%= link_to '記事一覧', articles_path, class: 'header-menu' %>
 <%= @article.name %>
 </h2>
+<%= @article.updated_at %>
 <%= @article.description %>
+<%= link_to '編集', edit_article_path(@article) %>
