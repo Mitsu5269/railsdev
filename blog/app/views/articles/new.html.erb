@@ -1,3 +1,10 @@
+<% if @article.errors.present? %>
+    <ul><div id="error_explanation"></div>
+    <% task.errors.full_message.each do |message| %>
+        <li><%= message %><\li>
+        <% end %>
+        </ul>
+<% end %>
 <h2>
 <%= link_to '一覧に戻る', articles_path, class: 'header-menu' %>
 新しい記事

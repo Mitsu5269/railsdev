@@ -13,9 +13,12 @@ class ArticlesController < ApplicationController
     end
 
     def create
-        article = Article.new(article_params)
-        article.save!
-        redirect_to articles_url, notice: "新しい記事を登録しました。"
+        @article = Article.new(article_params)
+        if @article.save
+            redirect_to @article, notice: "新しい記事を登録しました。"
+        else
+            render :new
+        end
     end
 
     def edit
