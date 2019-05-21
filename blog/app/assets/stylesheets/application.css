@@ -80,5 +80,18 @@
  }
 
  .article_created_at{
-     width: 25%;
+     width: 30%;
+ }
+
+ .show_updated_at{
+     text-align: right;
+ }
+
+ .show_description{
+     border: ridge 1px black;
+     background-color: aquamarine;
+ }
+
+ .show_command{
+     text-align: right;
  }

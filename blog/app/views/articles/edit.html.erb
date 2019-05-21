@@ -1,6 +1,6 @@
 <h2>
 <%= link_to '一覧に戻る', articles_path, class: 'header-menu' %>
-記事
+<%= @article.name %>
 </h2>
 <%= form_with model: @article, local: true do |f| %>
 <p>
