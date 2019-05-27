@@ -1,7 +1,7 @@
 <% if @article.errors.present? %>
     <ul><div id="error_explanation"></div>
-    <% task.errors.full_message.each do |message| %>
-        <li><%= message %><\li>
+    <% article.errors.full_message.each do |message| %>
+        <li><%= message %></li>
         <% end %>
         </ul>
 <% end %>

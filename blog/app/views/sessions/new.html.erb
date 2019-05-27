@@ -1,0 +1,17 @@
+<h2>
+<%= link_to '一覧に戻る', articles_path, class: 'header-menu' %>
+ログイン
+</h2>
+
+<%= form_with scope: :session, local: true do |f| %>
+    <p>
+        <%= f.text_field :name, placeholder: '管理者名', id: 'session_name' %>
+    </p>
+    <p>
+        <%= f.password_field :password, placeholder: 'パスワード', id: 'session_password' %>
+    </p>
+    <p>
+        <%= f.submit nil %>
+    </p>
+    
+    <% end %>

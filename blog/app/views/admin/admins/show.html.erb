@@ -1,0 +1,15 @@
+<h2>
+<%= link_to '管理者一覧', admin_admins_path, class: 'header-menu' %>
+<%= @admin.name %>
+</h2>
+<p class="show_updated_at">
+<%= @admin.updated_at  %>
+</p>
+<table align="right" class="show_option">
+<td class="edit_button">
+<%= link_to '編集', edit_admin_admin_path(@admin) %>
+</td>
+<td class="delete_button">
+<%= link_to '削除', [:admin, @admin], method: :delete, data: { confirm: "記事「#{@admin.name}」を削除します。よろしいですか？" } %>
+</td>
+</table>

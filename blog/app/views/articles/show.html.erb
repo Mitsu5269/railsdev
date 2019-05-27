@@ -5,10 +5,14 @@
 <p class="show_updated_at">
 <%= @article.updated_at  %>
 </p>
-<p class="show_description">
-<%= @article.description %>
-</p>
-<p class="show_command">
+<h3 class="show_description">
+<%= auto_link(simple_format(h(@article.description), {}, sanitize: false)) %>
+</h3>
+<table align="right" class="show_option">
+<td class="edit_button">
 <%= link_to '編集', edit_article_path(@article) %>
+</td>
+<td class="delete_button">
 <%= link_to '削除', @article, method: :delete, data: { confirm: "記事「#{@article.name}」を削除します。よろしいですか？" } %>
-</p>
+</td>
+</table>

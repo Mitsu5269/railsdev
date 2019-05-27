@@ -59,7 +59,7 @@
  }
 
  table{
-     width: 80%;
+     width: 100%;
     border-collapse: collapse;
  }
 
@@ -67,7 +67,7 @@
     border: solid 1px black;
  }
  table th{
-    padding: 3px 10px;
+    padding: 1px 10px;
     background-color: #ffff11;
  }
 
@@ -75,11 +75,11 @@
     padding: 3px 10px;  
  }
 
- .article_name{
+ .index_name{
      width: 50%;
  }
 
- .article_created_at{
+ .index_created_at{
      width: 30%;
  }
 
@@ -89,7 +89,7 @@
 
  .show_description{
      border: ridge 1px black;
-     background-color: aquamarine;
+     background-color: rgb(168, 245, 219);
  }
 
  .show_command{
@@ -118,4 +118,17 @@
  .delete_button:active{
     top: 4px;
     text-shadow: none;
+ }
+
+ .show_option{
+     border: none;
+    width: 20%;
+ }
+
+ .index_table_description{
+     height: 30px;
+ }
+
+ .index_description{
+     font-size: 16px;
  }

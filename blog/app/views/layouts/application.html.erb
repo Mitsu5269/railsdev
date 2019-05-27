@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <table>
+    <% if current_admin %>
+      <td><%= link_to '記事一覧', articles_path %></td>
+      <td><%= link_to '管理者一覧', admin_admins_path %></td>
+      <td><%= link_to 'ログアウト', logout_path, method: :delete %></td>
+    <% else %>
+      <td><%= link_to 'ログイン', login_path %></td>
+    <% end %>
+    </table>
+
     <div class="container">
     <h1><%= link_to image_tag('title.png', class: 'logo'), root_path %></h1>
     <%= yield %>

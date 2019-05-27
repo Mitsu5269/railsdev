@@ -5,8 +5,8 @@
 
 <table>
 <tr>
-    <th class="article_name">名称</th>
-    <th class="article_created_at">日時</th>
+    <th class="index_name">名称</th>
+    <th class="index_created_at">日時</th>
     <th></th>
     <th></th>
 </tr>
@@ -16,6 +16,9 @@
     <td><%= article.updated_at %></td>
     <td class="edit_button"><%= link_to '編集', edit_article_path(article) %></td>
     <td class="delete_button"><%= link_to '削除', article, method: :delete, data: { confirm: "記事「#{article.name}」を削除します。よろしいですか？" } %></td>
+</tr>
+<tr class="index_table_description">
+    <td class="index_description" colspan="4"><%= article.description[0..200] %></td>
 </tr>
 <% end %>
 </table>

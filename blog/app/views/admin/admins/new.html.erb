@@ -1,0 +1,27 @@
+<% if @admin.errors.present? %>
+    <ul><div id="error_explanation"></div>
+    <% admin.errors.full_message.each do |message| %>
+        <li><%= message %><\li>
+        <% end %>
+        </ul>
+<% end %>
+
+<h2>
+<%= link_to '一覧に戻る', admin_admins_path, class: 'header-menu' %>
+管理者登録
+</h2>
+
+<%= form_with model: [:admin, @admin], local: true do |f| %>
+    <p>
+        <%= f.text_field :name, placeholder: '管理者の名前' %>
+    </p>
+    <p>
+        <%= f.password_field :password, placeholder: 'パスワード' %>
+    </p>
+    <p>
+        <%= f.password_field :password_confirmation, placeholder: 'パスワード(確認)' %>
+    </p>
+    <p>
+        <%= f.submit nil %>
+    </p> 
+<% end %>

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_040056) do
+ActiveRecord::Schema.define(version: 2019_05_22_122055) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_admins_on_name", unique: true
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "name", null: false
