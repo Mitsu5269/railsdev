@@ -37,10 +37,19 @@
      padding: 5px;
  }
 
- .header-menu{
+ .new_button{
      font-size: 16px;
-     font-weight: normal;
      float: right;
+     text-align: center;
+     text-decoration: none;
+     font-weight: bold;
+     color: #79ecad;
+     text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #79da91, 0px 2px 0px #a2e6a8, 0px 3px 0px #a9e9ae;  
+ }
+
+ .new_button:active{
+    top: 4px;
+    text-shadow: none;
  }
 
  input[type="text"], textarea {
@@ -97,28 +106,45 @@
  }
 
  .edit_button{
-     text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: #799dec;
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;  
- }
- .edit_button:active{
-    top: 4px;
-    text-shadow: none;
- }
+    text-align: center;
+   text-decoration: none;
+   font-weight: bold;
+   color: #799dec;
+   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;  
+}
 
- .delete_button{
-     text-align: center;
+.edit_button:active{
+   top: 4px;
+   text-shadow: none;
+}
+
+.delete_button{
+    text-align: center;
+   text-decoration: none;
+   font-weight: bold;
+   color: #f5284a;
+   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #eb192a, 0px 2px 0px #f50b0b, 0px 3px 0px #f00a16;  
+}
+
+.delete_button:active{
+   top: 4px;
+   text-shadow: none;
+}
+
+.index_button{
+    font-size: 16px;
+    float: right;
+    text-align: center;
     text-decoration: none;
     font-weight: bold;
-    color: #f5284a;
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #eb192a, 0px 2px 0px #f50b0b, 0px 3px 0px #f00a16;  
- }
- .delete_button:active{
-    top: 4px;
-    text-shadow: none;
- }
+    color: #dfe765;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #cbda79, 0px 2px 0px #dce6a2, 0px 3px 0px #dde9a9;  
+}
+
+.index_button:active{
+   top: 4px;
+   text-shadow: none;
+}
 
  .show_option{
      border: none;
@@ -131,4 +157,10 @@
 
  .index_description{
      font-size: 16px;
+ }
+
+ .header_bar{
+     width: 25%;
+     background-color: darkkhaki;
+     text-align: right;
  }

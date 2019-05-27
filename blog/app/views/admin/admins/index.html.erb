@@ -1,5 +1,5 @@
 <h2>
-<%= link_to '管理者新規登録', new_admin_admin_path, class: 'header-menu' %>
+<%= link_to '管理者新規登録', new_admin_admin_path, class: 'new_button' %>
 管理者一覧
 </h2>
 
@@ -14,8 +14,8 @@
 <tr>
     <td><%= link_to admin.name, admin_admin_path(admin) %></td>
     <td><%= admin.updated_at %></td>
-    <td class="edit_button"><%= link_to '編集', edit_admin_admin_path(admin) %></td>
-    <td class="delete_button"><%= link_to '削除', [:admin, admin], method: :delete, data: { confirm: "記事「#{admin.name}」を削除します。よろしいですか？" } %></td>
+    <td><%= link_to '編集', edit_admin_admin_path(admin), class: "edit_button" %></td>
+    <td><%= link_to '削除', [:admin, admin], class: "delete_button", method: :delete, data: { confirm: "記事「#{admin.name}」を削除します。よろしいですか？" } %></td>
 </tr>
 <% end %>
 </table>

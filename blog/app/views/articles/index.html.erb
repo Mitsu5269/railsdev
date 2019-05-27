@@ -1,5 +1,5 @@
 <h2>
-<%= link_to '新しい記事', new_article_path, class: 'header-menu' %>
+<%= link_to '新しい記事', new_article_path, class: 'new_button' %>
 一覧
 </h2>
 
@@ -14,8 +14,8 @@
 <tr>
     <td><%= link_to article.name, article_path(article) %></td>
     <td><%= article.updated_at %></td>
-    <td class="edit_button"><%= link_to '編集', edit_article_path(article) %></td>
-    <td class="delete_button"><%= link_to '削除', article, method: :delete, data: { confirm: "記事「#{article.name}」を削除します。よろしいですか？" } %></td>
+    <td><%= link_to '編集', edit_article_path(article), class: "edit_button" %></td>
+    <td><%= link_to '削除', article, class: "delete_button", method: :delete, data: { confirm: "記事「#{article.name}」を削除します。よろしいですか？" } %></td>
 </tr>
 <tr class="index_table_description">
     <td class="index_description" colspan="4"><%= article.description[0..200] %></td>
